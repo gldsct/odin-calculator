@@ -19,5 +19,18 @@ let calculationInputButton = document.querySelector(".calculation-input-button")
 
 calculationInputButton.addEventListener("click", (event) => {
     let calculationInputElements = calculationInput.value.split(" ");
-    console.log(calculationInputElements);
+    switch (calculationInputElements[1]) {
+        case "+":
+            console.log(add(calculationInputElements[0], calculationInputElements[2]));
+            break;
+        case "-":
+            console.log(subtract(calculationInputElements[0], calculationInputElements[2]));
+            break;
+        case "*":
+            console.log(multiply(calculationInputElements[0], calculationInputElements[2]));
+            break;
+        case "/":
+            console.log(divide(calculationInputElements[0], calculationInputElements[2]));
+            break;
+    }
 });
